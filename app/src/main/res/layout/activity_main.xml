@@ -5,11 +5,47 @@
     android:layout_height="match_parent"
     tools:context="org.pondar.pacmankotlin.MainActivity" >
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/move_right"
-        android:id="@+id/moveRight"/>
+    <!-- Notice how the custom view is referenced here with
+a full package path-->
+    <org.pondar.pacmankotlin.GameView
+        android:id="@+id/gameView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+
+    </org.pondar.pacmankotlin.GameView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/move_left"
+            android:id="@+id/moveLeft"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/move_up"
+            android:id="@+id/moveUp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/move_down"
+            android:id="@+id/moveDown"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/move_right"
+            android:id="@+id/moveRight"/>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/pointsView"
@@ -17,14 +53,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/points" />
-
-    <!-- Notice how the custom view is referenced here with
-    a full package path-->
-    <org.pondar.pacmankotlin.GameView
-        android:id="@+id/gameView"
+    <TextView
+        android:id="@+id/timerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:text="@string/timerValue" />
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0.1"
+        >
 
-    </org.pondar.pacmankotlin.GameView>
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/continueLabel" />
+
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pause" />
+    </LinearLayout>
 
 </LinearLayout>

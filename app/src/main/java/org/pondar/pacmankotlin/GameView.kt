@@ -20,7 +20,6 @@ class GameView : View {
         this.game = game
     }
 
-
     /* The next 3 constructors are needed for the Android view system,
 	when we have a custom view.
 	 */
@@ -45,6 +44,8 @@ class GameView : View {
         if (!(game!!.coinsInitialized))
             game?.initializeGoldcoins()
 
+        if (!(game!!.enemiesInitialized))
+            game?.initializeEnemies()
 
         //Making a new paint object
         val paint = Paint()
@@ -54,7 +55,16 @@ class GameView : View {
         canvas.drawBitmap(game!!.pacBitmap, game?.pacx!!.toFloat(),
                 game?.pacy!!.toFloat(), paint)
 
-        //TODO loop through the list of goldcoins and draw them.
+        for(GoldCoin in game!!.coins){
+            if(GoldCoin.taken == false) {
+                canvas.drawBitmap(game!!.coinBitmap, GoldCoin.x.toFloat(),
+                        GoldCoin.y.toFloat(), paint)
+            }
+        }
+        for(Enemy in game!!.enemies){
+                canvas.drawBitmap(game!!.andreaBitmap, Enemy.x.toFloat(),
+                        Enemy.y.toFloat(), paint)
+        }
 
         game?.doCollisionCheck()
         super.onDraw(canvas)
