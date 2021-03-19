@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Kajs Popcorn Æventyr</string>
     <string name="points">Points:</string>
+    <string name="lvl">Level:</string>
     <string name="move_right">Move Right</string>
     <string name="move_left">Move Left</string>
     <string name="move_up">Move Up</string>

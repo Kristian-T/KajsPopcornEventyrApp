@@ -55,15 +55,15 @@ class GameView : View {
         canvas.drawBitmap(game!!.pacBitmap, game?.pacx!!.toFloat(),
                 game?.pacy!!.toFloat(), paint)
 
-        for(GoldCoin in game!!.coins){
-            if(GoldCoin.taken == false) {
+        for (GoldCoin in game!!.coins) {
+            if (GoldCoin.taken == false) {
                 canvas.drawBitmap(game!!.coinBitmap, GoldCoin.x.toFloat(),
                         GoldCoin.y.toFloat(), paint)
             }
         }
-        for(Enemy in game!!.enemies){
-                canvas.drawBitmap(game!!.andreaBitmap, Enemy.x.toFloat(),
-                        Enemy.y.toFloat(), paint)
+        for (Enemy in game!!.enemies) {
+            canvas.drawBitmap(game!!.andreaBitmap, Enemy.x.toFloat(),
+                    Enemy.y.toFloat(), paint)
         }
 
         game?.doCollisionCheck()

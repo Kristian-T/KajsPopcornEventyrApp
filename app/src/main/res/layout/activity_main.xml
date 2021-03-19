@@ -22,31 +22,36 @@ a full package path-->
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/moveLeft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/move_left"
-            android:id="@+id/moveLeft"/>
+            android:text="@string/move_left" />
 
         <Button
+            android:id="@+id/moveUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/move_up"
-            android:id="@+id/moveUp"/>
+            android:text="@string/move_up" />
 
         <Button
+            android:id="@+id/moveDown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/move_down"
-            android:id="@+id/moveDown"/>
+            android:text="@string/move_down" />
 
         <Button
+            android:id="@+id/moveRight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/move_right"
-            android:id="@+id/moveRight"/>
+            android:text="@string/move_right" />
 
     </LinearLayout>
-
+    <TextView
+        android:id="@+id/lvlView"
+        android:textSize="24sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lvl" />
     <TextView
         android:id="@+id/pointsView"
         android:textSize="24sp"
